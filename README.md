@@ -1,6 +1,6 @@
-# xb-cli-pc
+# perManage
 
-> vue脚手架pc端
+> 管理系统
 
 ## Build Setup
 
