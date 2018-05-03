@@ -11,12 +11,22 @@
       :width="item.width || ''">
     </el-table-column>
     <el-table-column
+      v-for="(item, index) in config.show"
+      :key="100 + index" 
+      :prop="item.prop"
+      :label="item.label"
+      :width="item.width || '80'">
+      <template slot-scope="scope">
+        <el-button @click="item.click(scope.row.detail)" type="text" size="small">{{item.text}}</el-button>
+      </template>
+    </el-table-column>
+    <el-table-column
       fixed="right"
       label="操作"
       width="100">
       <template slot-scope="scope">
-        <el-button @click="config.opera.edit" type="text" size="small">修改</el-button>
-        <el-button @click="config.opera.del" type="text" size="small">删除</el-button>
+        <el-button @click="config.opera.edit(scope.row._id)" type="text" size="small">修改</el-button>
+        <el-button @click="config.opera.del(scope.row._id)" type="text" size="small">删除</el-button>
       </template>
     </el-table-column>
   </el-table>
@@ -27,31 +37,12 @@ export default {
   name: 'table-box',
   data () {
     return {
-        tableData: [{
-          user: '刘备',
-          region: '许都',
-          time: '2018-04-22',
-          'created-by': 'xb',
-      },{
-          user: '刘备',
-          region: '许都',
-          time: '2018-04-22',
-          'created-by': 'xb',
-      },{
-          user: '刘备',
-          region: '许都',
-          time: '2018-04-22',
-          'created-by': 'xb',
-      },{
-          user: '刘备',
-          region: '许都',
-          time: '2018-04-22',
-          'created-by': 'xb',
-      }],
+        title: 'table' 
     }
   },
   props: {
-      config: Object
+      config: Object,
+      tableData: Array
   },
   methods: {
   },

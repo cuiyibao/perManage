@@ -1,0 +1,16 @@
+.form-dialog{
+    .el-form-item{
+       display: inline-block;
+       .el-form-item__label{
+            float: none;
+            display: inline-block;
+            width: 100px;
+       }
+       .el-form-item__content{
+            display: inline-block;
+            .el-input{
+                width: 230px;
+            }
+       }
+    }
+}

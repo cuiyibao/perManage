@@ -7,7 +7,7 @@ Vue.use(Router)
 
 export const router = [
   {
-    path: '/message',
+    path: '/',
     name: 'Message',
     title: '信息管理',
     component: Message
