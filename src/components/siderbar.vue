@@ -7,28 +7,21 @@
 </template>
 
 <script>
-import { getDataList } from '../network/module/messagePgae'
 export default {
-  name: 'App',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      router: this.$store.state.route
-    }
-  },
-  methods: {
-      getDataList() {
-          getDataList().then(() => {})
-      }
-  },
-  created () {
-  }
-}
+    name: "siderbar",
+    data() {
+        return {
+            router: this.$store.state.route
+        };
+    },
+    methods: {},
+    created() {}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .app-main-sider{
-        height: 100%;
-    }
+.app-main-sider {
+    height: 100%;
+}
 </style>

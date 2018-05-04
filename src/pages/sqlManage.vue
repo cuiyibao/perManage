@@ -1,7 +1,14 @@
 <template>
-    <el-row>
-        <el-col>222</el-col>
-    </el-row>
+    <div>
+        <el-form>
+          <el-form-item label="个人简介">
+              <el-input type="textarea"></el-input>
+          </el-form-item>
+          <el-form-item label="个人喜好">
+              <el-input type="textarea"></el-input>
+          </el-form-item>
+        </el-form>
+    </div>
 </template>
 
 <script>

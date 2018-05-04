@@ -16,7 +16,7 @@ export function getNet (config) {
     //添加请求拦截器
     net.interceptors.request.use(
         (request) => {
-            if (request.method === 'post') {
+            if (request.method === 'post' || request.method === 'put') {
                 request.data = Qs.stringify(request.data)
             }
             return request

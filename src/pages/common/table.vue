@@ -23,9 +23,10 @@
     <el-table-column
       fixed="right"
       label="操作"
-      width="100">
+      width="100"
+      v-if="config.opera">
       <template slot-scope="scope">
-        <el-button @click="config.opera.edit(scope.row._id)" type="text" size="small">修改</el-button>
+        <el-button @click="config.opera.edit(scope.row)" type="text" size="small">修改</el-button>
         <el-button @click="config.opera.del(scope.row._id)" type="text" size="small">删除</el-button>
       </template>
     </el-table-column>

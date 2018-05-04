@@ -9,8 +9,8 @@ export const API_PER = '/api/perMessage'
 /**
  * 获取个人信息
  */
-export function getDataList() {
-    return net.get(API_PER)
+export function getDataList(params) {
+    return net.get(API_PER, { params })
 }
 /**
  * 新增个人信息
@@ -21,8 +21,8 @@ export function addDataList(params) {
 /**
  * 修改个人信息
  */
-export function updataDataList() {
-    return net.put(API_PER)
+export function updataDataList(id, params) {
+    return net.put(API_PER + '/:' + id, params)
 }
 /**
  * 删除个人信息
