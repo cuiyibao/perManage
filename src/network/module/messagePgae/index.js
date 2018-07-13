@@ -9,7 +9,7 @@ export const API_PER = '/api/perMessage'
 /**
  * 获取个人信息
  */
-export function getDataList(params) {
+export function getDataList(params = {}) {
     return net.get(API_PER, { params })
 }
 /**

@@ -252,7 +252,7 @@ export default {
             this.$refs.addForm.validate(result => {
                 if (result) {
                     //性别、地区和时间处理
-                    let _sex = "",
+                    let _sex = _form.sex,
                         _area = [],
                         _birthday = "",
                         _form = this.addForm;

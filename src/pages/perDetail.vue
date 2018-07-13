@@ -13,10 +13,9 @@
 
 <script>
 export default {
-  name: 'Message',
+  name: 'perDetail',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       data: ''
     }
   },
